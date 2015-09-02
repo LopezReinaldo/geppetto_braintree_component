@@ -1,0 +1,114 @@
+<!-- <header class="user" ng-include="'app/views/en-US/header.html'"></header> -->
+<div class="project">
+	<h1 class="title">Payment Details</h1>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6 col-md-8">
+				<div class="panel panel-default col-md-offset-5">
+					<div class="panel-body">
+						<form class="form-horizontal" name="paymentForm" id="checkout" novalidate="novalidate"
+							method="post">
+							<div class="row">
+								<div class="col-xs-10 col-sm-offset-1">
+									<div class="form-group">
+										<label for="cardholder_name" class="control-label">Card
+											Holder Name</label> <input class="form-control" name="cardholderName"
+											ng-model="paymentDetail.cardholderName"
+											data-braintree-name="cardholder_name"
+											placeholder="Enter Card Holder Name"
+											required="required"><span
+											ng-show="paymentForm.cardholderName.$dirty && paymentForm.cardholderName.$error"
+											style="color: red;"><span
+											ng-show="paymentForm.cardholderName.$error.required">Card Holder Name is
+											required!</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-10 col-sm-offset-1">
+									<div class="form-group">
+										<label for="number" class="control-label">Card Number</label>
+										<div class="input-group">
+										<input class="form-control" name="number" type="text"
+											ng-model="paymentDetail.number"
+											data-braintree-name="number"
+											data-ng-pattern="/^3(?:[47]\d([ -]?)\d{4}(?:\1\d{4}){2}|0[0-5]\d{11}|[68]\d{12})$|^4(?:\d\d\d)?([ -]?)\d{4}(?:\2\d{4}){2}$|^6011([ -]?)\d{4}(?:\3\d{4}){2}$|^5[1-5]\d\d([ -]?)\d{4}(?:\4\d{4}){2}$|^2014\d{11}$|^2149\d{11}$|^2131\d{11}$|^1800\d{11}$|^3\d{15}$/"
+											required="required" placeholder="Enter Card Number">
+											<span class="input-group-addon"><i class="fa fa-credit-card"></i></span>											
+										</div>
+											<span ng-show="paymentForm.number.$dirty && paymentForm.number.$error"
+											style="color: red;"><span
+											ng-show="paymentForm.number.$error.required">Card Number is
+											required!</span><span ng-show="paymentForm.number.$error.pattern">Invalid
+											Card Number!</span></span>
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-xs-5 col-sm-offset-1">
+									<div class="form-group">
+										<label for="expiration_date" class="control-label">Expiration
+											Date</label>
+										<div>
+											<input class="form-control" name="expirationDate"
+												ng-model="paymentDetail.expirationDate"
+												data-ng-pattern="/^((0[1-9])|(1[0-2]))[\/\.\-]*((1[5-9])|(2[0-5]))$/"
+												data-braintree-name="expiration_date" required="required"
+												placeholder="MM / YY"><span ng-show="paymentForm.expirationDate.$dirty && paymentForm.expirationDate.$error"
+												style="color: red;"><span
+												ng-show="paymentForm.expirationDate.$error.required">Expiration Date is
+												required!</span><span ng-show="paymentForm.expirationDate.$error.pattern">Invalid
+												Expiration Date!</span></span>
+										</div>
+									</div>
+								</div>
+								<div class="col-xs-4 col-sm-offset-1">
+									<div class="form-group">
+										<label for="cvv" class="control-label">CVV Number</label>
+										<div>
+											<input class="form-control" name="cvv"
+												ng-model="paymentDetail.cvv" required="required"
+												data-braintree-name="cvv"
+												data-ng-pattern="/^[0-9]{3,4}$/"
+												placeholder="Enter CVV Number">
+												<span ng-show="paymentForm.cvv.$dirty && paymentForm.cvv.$error"
+												style="color: red;"><span
+												ng-show="paymentForm.cvv.$error.required">CVV Number is
+												required!</span><span ng-show="paymentForm.cvv.$error.pattern">Invalid
+												CVV Number!</span></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-5 col-sm-offset-1">
+									<div class="form-group">
+										<label for="postal_code" class="control-label">Postal
+											Code</label> <input class="form-control" name="postalCode"
+											ng-model="paymentDetail.billingAddress.postalCode" required="required"
+											data-ng-pattern="/^([1-9]{2}|[0-9][1-9]|[1-9][0-9])[0-9]{3}$/"
+											data-braintree-name="postal_code"
+											placeholder="Enter Postal Code">
+											<span ng-show="paymentForm.postalCode.$dirty && paymentForm.postalCode.$error"
+											style="color: red;"><span
+											ng-show="paymentForm.postalCode.$error.required">CVV Number is
+											required!</span><span ng-show="paymentForm.postalCode.$error.pattern">Invalid
+											Postal Code!</span></span>
+									</div>
+								</div>
+							</div>
+							<div class="action">
+								<input class="btn btn-default submit col-sm-offset-5" type="submit" id="submit"
+								ng-click="subscribe()" ng-disabled="!paymentForm.$valid"
+								value="Subcribe">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <footer ng-include="'app/views/en-US/footer.html'"></footer> -->
