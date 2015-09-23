@@ -21,6 +21,49 @@
 	<context:annotation-config />
 	<tx:annotation-driven />
 	<tx:annotation-driven proxy-target-class="true" />
+	
+	<context:property-placeholder location="/WEB-INF/resources/jdbc.properties"
+		order="1" ignore-unresolvable="true" />
+	<context:property-placeholder
+		location="/WEB-INF/resources/sql_properties/customer_sql.properties"
+		order="2" ignore-unresolvable="true" />
+
+	<beans:bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+		<beans:property name="driverClassName">
+			<beans:value>${jdbc.drivername}</beans:value>
+		</beans:property>
+		<beans:property name="url">
+			<beans:value>${jdbc.url}</beans:value>
+		</beans:property>
+		<beans:property name="username">
+			<beans:value>${jdbc.username}</beans:value>
+		</beans:property>
+		<beans:property name="password">
+			<beans:value>${jdbc.password}</beans:value>
+		</beans:property>
+	</beans:bean>
+
+	<beans:bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<beans:property name="dataSource" ref="dataSource" />
+		<beans:property name="packagesToScan" value="com.geppetto.mailchimp.dto" />
+		<beans:property name="jpaVendorAdapter">
+			<beans:bean
+				class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</beans:property>
+		<beans:property name="jpaProperties">
+			<beans:props>
+				<beans:prop key="hibernate.hbm2ddl.auto">update</beans:prop>
+				<beans:prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect
+				</beans:prop>
+			</beans:props>
+		</beans:property>
+	</beans:bean>
+
+	<beans:bean id="transactionManager"
+		class="org.springframework.orm.jpa.JpaTransactionManager">
+		<beans:property name="entityManagerFactory" ref="entityManagerFactory" />
+	</beans:bean>
 
 	<beans:bean id="persistenceExceptionTranslationPostProcessor"
 		class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
