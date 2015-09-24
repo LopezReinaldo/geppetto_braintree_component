@@ -47,11 +47,9 @@ public class CustomerDao implements ICustomerDao{
 		CustomerMapper the_mapper = new CustomerMapper();
 		List<Customer> dto_list = this.namedParameterJdbcTemplate.query(
 				find_customer_by_id_sql, parameters, the_mapper);
-		System.out.println("In find_all_base_by_projectid - dto_list is: "
-				+ dto_list.size());
+		
 		if (dto_list.size() < 1) {
-			throw new Exception("no activities for project id   " + customer_id
-					+ " were found");
+			throw new Exception("There is no customer for id   " + customer_id);
 
 		}
 
