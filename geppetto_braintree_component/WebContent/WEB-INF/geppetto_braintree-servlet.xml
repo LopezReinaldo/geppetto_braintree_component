@@ -46,7 +46,7 @@
 	<beans:bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<beans:property name="dataSource" ref="dataSource" />
-		<beans:property name="packagesToScan" value="com.geppetto.mailchimp.dto" />
+		<beans:property name="packagesToScan" value="com.geppetto.braintree.dto" />
 		<beans:property name="jpaVendorAdapter">
 			<beans:bean
 				class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
