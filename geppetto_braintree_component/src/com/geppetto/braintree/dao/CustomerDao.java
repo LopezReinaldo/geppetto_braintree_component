@@ -13,7 +13,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import com.geppetto.braintree.dao.support.CustomerMapper;
-import com.geppetto.braintree.domain.core.Customer;
+import com.geppetto.braintree.dto.Customer;
 import com.geppetto.braintree.interfaces.dao.ICustomerDao;
 
 

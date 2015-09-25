@@ -5,7 +5,7 @@ import java.sql.SQLException;
 
 import org.springframework.jdbc.core.RowMapper;
 
-import com.geppetto.braintree.domain.core.Customer;
+import com.geppetto.braintree.dto.Customer;
 
 public class CustomerMapper implements RowMapper<Customer>{
 

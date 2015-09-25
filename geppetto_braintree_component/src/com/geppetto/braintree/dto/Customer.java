@@ -1,4 +1,4 @@
-package com.geppetto.braintree.domain.core;
+package com.geppetto.braintree.dto;
 
 import java.util.Date;
 

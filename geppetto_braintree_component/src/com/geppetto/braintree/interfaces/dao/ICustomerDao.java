@@ -1,6 +1,6 @@
 package com.geppetto.braintree.interfaces.dao;
 
-import com.geppetto.braintree.domain.core.Customer;
+import com.geppetto.braintree.dto.Customer;
 
 public interface ICustomerDao {
 

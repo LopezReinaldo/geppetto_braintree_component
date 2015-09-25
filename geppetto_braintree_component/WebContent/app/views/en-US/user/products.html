@@ -1,0 +1,28 @@
+<header class="user" ng-include="'app/views/en-US/header.html'"></header>
+
+<div class="products">
+	<button class="btn complete add" data-ng-click="openAddProjectModal()">
+        <i class="fa fa-plus-circle"></i>
+        <span>Checkout</span>
+    </button>	
+	 <ul>
+        <li data-ng-repeat="object in json" id="{{object.id}}" >
+            <h3 class="title lead">{{object.name}}</h3>
+            <h4 class="label">{{object.label}}</h4>
+            <p class="description">
+               {{object.description}}
+            </p>
+            <div class="action">
+                <button class="btn complete add" data-ng-click="openAddProjectModal()">
+        			<i class="fa fa-plus-circle"></i>
+        			<span>Add</span>
+    			</button>
+            </div>
+		</li>
+	</ul>
+</div>
+
+
+
+
+<footer ng-include="'app/views/en-US/footer.html'"></footer>

@@ -1,5 +1,7 @@
 package com.geppetto.braintree.controller;
 
+import javax.annotation.Resource;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -16,19 +18,32 @@ import com.braintreegateway.Result;
 import com.braintreegateway.Subscription;
 import com.braintreegateway.SubscriptionRequest;
 import com.geppetto.braintree.dto.PaymentDetail;
+import com.geppetto.braintree.services.CustomerService;
 
 @Controller("CheckoutController")
 @RequestMapping(value = "/checkout")
 public class CheckoutController {
 	
-	public static BraintreeGateway gateway = new BraintreeGateway(Environment.SANDBOX,
-			"your_merchant_id",
-			"your_public_key",
-			"your_private_key"
+	public static BraintreeGateway gateway = new BraintreeGateway(
+			  Environment.SANDBOX,
+			  "",
+			  "",
+			  ""
 			);
 
 	private static final Logger LOG = LoggerFactory.getLogger(CheckoutController.class);
 	
+	private CustomerService customer_service;
+
+	public CustomerService getCustomer_service() {
+		return customer_service;
+	}
+
+	@Resource(name = "CustomerService")
+	public void setCustomer_service(CustomerService customer_service) {
+		this.customer_service = customer_service;
+	}
+
 	@RequestMapping(value = "/getClientToken", method = RequestMethod.GET, headers = "Accept=application/json")
 	@ResponseBody
 	public String getClientToken(){		
@@ -39,12 +54,15 @@ public class CheckoutController {
 	
 	@RequestMapping(value = "/processPayment", method = RequestMethod.POST, headers = "Accept=application/json")
 	@ResponseBody
-	public String proccesPayment(@RequestBody PaymentDetail paymentDetail){
+	public String proccesPayment(@RequestBody PaymentDetail paymentDetail) throws Exception{
 		
-		LOG.debug("proccesPayment payment_method_nonce : "+paymentDetail.getNonce());				
-						
+		LOG.debug("proccesPayment payment_method_nonce : "+paymentDetail.getNonce());
+		
+		com.geppetto.braintree.dto.Customer c;
+		c = customer_service.find_customer(1); //replace for the id of the user logged						
+		
 		CustomerRequest crequest = new CustomerRequest()
-		.firstName("First Name").lastName("Last Name") // information of the user logged
+		.firstName(c.getFirst_name()).lastName(c.getLast_name()) // information of the user logged
 	    .paymentMethodNonce(paymentDetail.getNonce());
 
 		Result<Customer> cresult = gateway.customer().create(crequest);
