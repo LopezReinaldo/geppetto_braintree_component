@@ -7,7 +7,17 @@ import org.springframework.stereotype.Service;
 import com.geppetto.braintree.dto.Customer;
 import com.geppetto.braintree.interfaces.dao.ICustomerDao;
 import com.geppetto.braintree.interfaces.services.ICustomerService;
-
+/**
+ * 
+ * @author Reinaldo </br> 
+ * Date Created: 10/09/2015</br>
+ * 
+ * 
+ * The purpose of this class is to provide the entry point for any
+ * functions having to do with customers</br>
+ * 
+ * 
+ */
 @Service("CustomerService")
 public class CustomerService implements ICustomerService{
 		

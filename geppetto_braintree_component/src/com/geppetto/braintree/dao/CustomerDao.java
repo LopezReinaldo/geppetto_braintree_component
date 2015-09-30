@@ -15,7 +15,15 @@ import org.springframework.stereotype.Repository;
 import com.geppetto.braintree.dao.support.CustomerMapper;
 import com.geppetto.braintree.dto.Customer;
 import com.geppetto.braintree.interfaces.dao.ICustomerDao;
-
+/**
+ * 
+ * @author Reinaldo</br> 
+ * Date Created: 10/09/2015</br>
+ *
+ * The purpose of this class is to interact with the db for the basic
+ * search</br> and CRUD operations for the customers</p>
+ *
+ */
 
 @Repository("CustomerDao")
 public class CustomerDao implements ICustomerDao{

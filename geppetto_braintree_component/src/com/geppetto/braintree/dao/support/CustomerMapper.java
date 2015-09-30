@@ -6,7 +6,15 @@ import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 
 import com.geppetto.braintree.dto.Customer;
-
+/**
+ * 
+ * @author Reinaldo</br> 
+ * Date Created: 10/09/2015</br>
+ *
+ * Standard mapper used in get data from the customer table</p>
+ *
+ *
+ */
 public class CustomerMapper implements RowMapper<Customer>{
 
 	@Override

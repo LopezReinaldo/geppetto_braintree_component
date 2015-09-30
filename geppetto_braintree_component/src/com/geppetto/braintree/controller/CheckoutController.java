@@ -20,6 +20,16 @@ import com.braintreegateway.SubscriptionRequest;
 import com.geppetto.braintree.dto.PaymentDetail;
 import com.geppetto.braintree.services.CustomerService;
 
+/**
+ * 
+ * @author Reinaldo 
+ * Creation Date: 10/09/2015
+ * 
+ * The purpose of the CheckoutController is to process the payments
+ * coming from the checkout form
+ *
+ *
+ */
 @Controller("CheckoutController")
 @RequestMapping(value = "/checkout")
 public class CheckoutController {
