@@ -27,6 +27,15 @@
 	<context:property-placeholder
 		location="/WEB-INF/resources/sql_properties/customer_sql.properties"
 		order="2" ignore-unresolvable="true" />
+	<context:property-placeholder
+		location="/WEB-INF/resources/sql_properties/product_sql.properties"
+		order="3" ignore-unresolvable="true" />
+	<context:property-placeholder
+		location="/WEB-INF/resources/sql_properties/order_sql.properties"
+		order="4" ignore-unresolvable="true" />
+	<context:property-placeholder
+		location="/WEB-INF/resources/sql_properties/transaction_sql.properties"
+		order="5" ignore-unresolvable="true" />				
 
 	<beans:bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
 		<beans:property name="driverClassName">

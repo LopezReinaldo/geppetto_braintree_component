@@ -4,7 +4,13 @@ var app = angular.module("BraintreeActivity", [ 'ngRoute', 'ngCookies',
 
 app.config([ '$routeProvider', function($routeProvider) {
 	$routeProvider.when("/", {
-		redirectTo : "/en-US/checkout"
+		redirectTo : "/en-US/products"
+	}).when("/en-US/products", {
+		templateUrl : "app/views/en-US/user/products.html",
+		controller : "ProductController"		
+	}).when("/en-US/products/:action", {
+		templateUrl : "app/views/en-US/user/products.html",
+		controller : "ProductController"
 	}).when("/en-US/checkout", {
 		templateUrl : "app/views/en-US/user/checkout.html",
 		controller : "CheckoutController"
@@ -12,7 +18,7 @@ app.config([ '$routeProvider', function($routeProvider) {
 		templateUrl : "app/views/en-US/user/checkout.html",
 		controller : "CheckoutController"
 	}).otherwise({
-		redirectTo : "/en-US/checkout"
+		redirectTo : "/en-US/products"
 	});
 } ]);
 

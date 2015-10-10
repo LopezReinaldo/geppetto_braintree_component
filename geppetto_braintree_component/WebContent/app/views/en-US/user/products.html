@@ -1,28 +1,25 @@
-<header class="user" ng-include="'app/views/en-US/header.html'"></header>
+<!--carousel with filter-->
+<div class="wfilter_carousel m_bottom_30 m_xs_bottom_15 col-lg-9 col-md-9 col-sm-9 m_xs_bottom_30">
+<figure data-ng-repeat="object in json" id="{{object.id}}" class="r_corners photoframe shadow relative tr_all_hover long col-sm-4">
+	<!--product preview-->
+	<a href="#" class="d_block relative pp_wrap"> <img
+		src="images/product/{{object.image}}" class="tr_all_hover" alt=""> <span
+		data-popup="#quick_view_product"
+		class="button_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">Quick
+			View</span>
+	</a>
+	<!--description and price of product-->
+	<figcaption>
+		<h5 class="m_bottom_10">
+			<a href="#" class="color_dark ellipsis">{{object.name}}</a>
+		</h5>
+		<div class="clearfix">
+			<p class="scheme_color f_left f_size_large m_bottom_15">{{object.price | currency}}</p>
 
-<div class="products">
-	<button class="btn complete add" data-ng-click="openAddProjectModal()">
-        <i class="fa fa-plus-circle"></i>
-        <span>Checkout</span>
-    </button>	
-	 <ul>
-        <li data-ng-repeat="object in json" id="{{object.id}}" >
-            <h3 class="title lead">{{object.name}}</h3>
-            <h4 class="label">{{object.label}}</h4>
-            <p class="description">
-               {{object.description}}
-            </p>
-            <div class="action">
-                <button class="btn complete add" data-ng-click="openAddProjectModal()">
-        			<i class="fa fa-plus-circle"></i>
-        			<span>Add</span>
-    			</button>
-            </div>
-		</li>
-	</ul>
+		</div>
+		<button
+			class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0" data-ng-click="addToCart(object.id, 1)">Add
+			to Cart</button>
+	</figcaption>
+</figure>
 </div>
-
-
-
-
-<footer ng-include="'app/views/en-US/footer.html'"></footer>

@@ -1,0 +1,488 @@
+<!doctype html>
+<!--[if IE 9 ]<html class="ie9" lang="en"><! [endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+	<head>
+		<title>Supermarket - Online Grocery Shop</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<!--meta info-->
+		<meta name="Grocery Online Shop" content="">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="icon" type="image/ico" href="images/fav.ico">
+		<!--CSS Stylesheet -->
+		<link rel="stylesheet" type="text/css" media="all" href="css/flexslider.css">
+		<link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" media="all" href="css/owl.carousel.css">
+		<link rel="stylesheet" type="text/css" media="all" href="css/owl.transitions.css">
+		<link rel="stylesheet" type="text/css" media="all" href="css/jquery.custom-scrollbar.css">
+		<link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+		<!--Font Include -->
+		<link rel="stylesheet" href="css/font-awesome-min.css">
+	</head>
+	<body>
+		<!--boxed layout-->
+		<div class="wide_layout relative w_xs_auto">
+			<!--[if (lt IE 9) | IE 9]>
+				<div style="background:#fff;padding:8px 0 10px;">
+				<div class="container" style="width:1170px;"><div class="row wrapper"><div class="clearfix" style="padding:9px 0 0;float:left;width:83%"><i class="fa fa-exclamation-triangle scheme_color f_left m_right_10" style="font-size:25px;color:#e74c3c;"></i><b style="color:#e74c3c;">Attention ! This page may not display correctly.</b> <b>You are using an outdated version of Internet Explorer. For a faster, safer browsing experience.</b></div><div class="t_align_r" style="float:left;width:16%;"><a href="" class="button_type_4 r_corners bg_scheme_color color_light d_inline_b t_align_c" target="_blank" style="margin-bottom:2px;">Update Now!</a></div></div></div></div>
+		    <![endif]-->
+			<!--Header layout-->
+			<header role="banner">
+				<!--Header top part -->
+				<section class="h_top_part">
+					<div class="container">
+						<div class="row clearfix">
+							<div class="col-lg-6 col-md-6 col-sm-6 t_xs_align_c">
+								<p class="f_size_small">Welcome Visitor can you <a href="#">Log In</a> or <a href="#">Create an Account</a></p>
+							</div>
+							<div class="col-lg-6 col-md-6 col-sm-6 t_align_r t_xs_align_c">
+								<ul class="d_inline_b horizontal_list clearfix f_size_small users_nav">
+									<li><a href="#" class="default_t_color">My Account</a></li>
+									<li><a href="#" class="default_t_color">Orders List</a></li>
+									<li><a href="#" class="default_t_color">Wishlist</a></li>
+									<li><a href="#" class="default_t_color">Checkout</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>	
+				</section>
+				<!--Header top part End-->
+				<!--Header bottom part -->
+				<section class="h_bot_part container">
+					<div class="clearfix row">
+						<div class="col-lg-6 col-md-6 col-sm-6 t_xs_align_c">
+							<a href="index.html" class="logo m_xs_bottom_15 d_xs_inline_b">
+								<img src="images/logo.png" alt="Supermarket - Online Grocery Shop">
+							</a>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-6">
+							<form class="relative type_2" role="search">
+								<input type="text" placeholder="Search" name="Search" class="r_corners f_size_medium full_width">
+								<button class="f_right search_button tr_all_hover f_xs_none">
+								<i class="fa fa-search"></i>
+								</button>
+							</form>
+						</div>
+					</div>
+				</section>
+				<!--Header bottom part End -->
+				<!--Main Menu Container-->
+				<div class="container">
+					<section class="menu_wrap type_2 relative clearfix t_xs_align_c m_bottom_20">
+						<!-- button for responsive menu-->
+						<button id="menu_button" class="r_corners centered_db d_none tr_all_hover d_xs_block m_bottom_15">
+							<span class="centered_db r_corners"></span>
+							<span class="centered_db r_corners"></span>
+							<span class="centered_db r_corners"></span>
+						</button>
+						<!--Main Menu-->
+						<nav role="navigation" class="f_left f_xs_none d_xs_none t_xs_align_l">
+							<ul class="horizontal_list main_menu clearfix">
+								<li class="current relative f_xs_none m_xs_bottom_5">
+									<a href="index.html" class="tr_delay_hover color_light tt_uppercase"><b>Home</b></a>
+								</li>
+								<li class="relative f_xs_none m_xs_bottom_5">
+									<a href="#" class="tr_delay_hover color_light tt_uppercase">Groceries</a>
+									<!--Submenu-->
+									<div class="sub_menu_wrap top_arrow d_xs_none type_2 tr_all_hover clearfix r_corners">
+										<ul class="sub_menu">
+											<li><a href="#" class="color_dark tr_delay_hover">Sample Menu1</a></li>
+											<li><a href="#" class="color_dark tr_delay_hover">Sample Menu2</a></li>
+											<li><a href="#" class="color_dark tr_delay_hover">Sample Menu3</a></li>
+											<li><a href="#" class="color_dark tr_delay_hover">Sample Menu4</a></li>
+										</ul>
+									</div>
+								</li>
+								<li>
+								Organic Products
+								</li>
+								<li>
+								Children Care
+								</li>
+								<li>
+								Fruits & Vegetables
+								</li>
+								<li>
+								Personal Care
+								</li>
+								<li>
+								Contact
+								</li>
+							</ul>
+						</nav>
+						<ul class="f_right horizontal_list clearfix t_align_l t_xs_align_c site_settings d_xs_inline_b f_xs_none">
+							<!--Like--->
+							<li class="d_sm_none d_xs_block">
+								<a href="#" role="button" class="button_type_1 color_dark d_block bg_light_color_1 r_corners tr_delay_hover box_s_none">
+								<i class="fa fa-heart-o f_size_ex_large"></i><span class="count circle t_align_c">10</span>
+								</a>
+							</li>
+							<!--Shopping Cart-->
+							<li class="m_left_5 relative container3d" id="shopping_bottom">
+								<a href="#" role="button" class="button_type_3 color_light bg_scheme_color d_block r_corners tr_delay_hover box_s_none">
+									<span class="d_inline_middle shop_icon">
+										<i class="fa fa-shopping-cart"></i>
+										<span class="count tr_delay_hover type_2 circle t_align_c">2</span>
+									</span>
+									<b>$335</b>
+								</a>
+								<!--Cart List-->
+								<div class="shopping_cart top_arrow tr_all_hover r_corners">
+									<div class="f_size_medium sc_header">Recently added item(s)</div>
+									<ul>
+										<li>
+											<div class="clearfix">
+												<!--Product Image-->
+												<img class="f_left m_right_10" src="images/shopping_c_img_1.jpg" alt="">
+												<!--Product Description-->
+												<div class="f_left product_description">
+													<a href="#" class="color_dark m_bottom_5 d_block">
+													Donec luctus, velit quis accumsan vulputate
+													</a>
+													<span class="f_size_medium">Product Code PS34</span>
+												</div>
+												<!--Product Price-->
+												<div class="f_left f_size_medium">
+													<div class="clearfix">
+														1 x<b class="color_dark">$99.00</b>
+													</div>
+													<button class="close_product color_dark tr_hover">
+														<i class="fa fa-times"></i>
+													</button>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="clearfix">
+												<!--Product Image-->
+												<img class="f_left m_right_10" src="images/shopping_c_img_1.jpg" alt="">
+												<!--Product Description-->
+												<div class="f_left product_description">
+													<a href="#" class="color_dark m_bottom_5 d_block">
+													Donec luctus, velit quis accumsan vulputate
+													</a>
+													<span class="f_size_medium">Product Code PS34</span>
+												</div>
+												<!--Product Price-->
+												<div class="f_left f_size_medium">
+													<div class="clearfix">
+														1 x<b class="color_dark">$99.00</b>
+													</div>
+													<button class="close_product color_dark tr_hover">
+														<i class="fa fa-times"></i>
+													</button>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="clearfix">
+												<!--Product Image-->
+												<img class="f_left m_right_10" src="images/shopping_c_img_1.jpg" alt="">
+												<!--Product Description-->
+												<div class="f_left product_description">
+													<a href="#" class="color_dark m_bottom_5 d_block">
+													Donec luctus, velit quis accumsan vulputate
+													</a>
+													<span class="f_size_medium">Product Code PS34</span>
+												</div>
+												<!--Product Price-->
+												<div class="f_left f_size_medium">
+													<div class="clearfix">
+														1 x<b class="color_dark">$99.00</b>
+													</div>
+													<button class="close_product color_dark tr_hover">
+														<i class="fa fa-times"></i>
+													</button>
+												</div>
+											</div>
+										</li>
+									</ul>
+									<!--Total Prices-->
+									<ul class="total_price bg_light_color_1 t_align_r color_dark">
+										<li class="m_bottom_10">Tax: 
+										<span class="f_size_large sc_price t_align_l d_inline_b m_left_15">$0.00</span>
+										</li>
+										<li class="m_bottom_10">Tax: 
+										<span class="f_size_large sc_price t_align_l d_inline_b m_left_15">$37.00</span>
+										</li>
+										<li>
+										 Total : <b class="f_size_large bold scheme_color sc_price t_align_l d_inline_b m_left_15">$999.00</b>
+										</li>
+									</ul>
+									<!--Cart Button-->
+									<div class="sc_footer t_align_c">
+										<a href="#" role="button" class="button_type_4 d_inline_middle bg_light_color_2 r_corners color_dark t_align_c tr_all_hover m_mxs_bottom_5">View Cart</a>
+										<a href="#" role="button" class="button_type_4 bg_scheme_color d_inline_middle r_corners tr_all_hover color_light">Checkout</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</section>
+				</div>
+				<!--Main Menu Container End-->
+			</header>
+			<!--Header layout End-->
+			
+			<!--Slider with banner-->
+			<section class="container">
+				<div class="row clearfix">
+					<!--Slider-->
+					<div class="col-lg-9 col-md-9 col-sm-9 m_xs_bottom_30">
+						<div class="flexslider animate_ftr long">
+							<ul class="slides">
+							<!-- Slideshow Images List-->
+								<li>
+									<img src="images/slide_04.jpg" alt="" data-custom-thumb="images/slide_01.jpg"> 
+									<!--Text Animation Part-->
+									<section class="slide_caption t_align_c d_xs_none">
+										<div class="f_size_large color_light tt_uppercase slider_title_3 m_bottom_10">Our New Offer</div>
+										<hr class="slider_divider d_inline_b m_bottom_10">
+										<div class="color_light slider_title_4 tt_uppercase t_align_c m_bottom_45 m_md_bottom_20">
+											<b>UPTO 20%</b>
+										</div>
+										<a href="#" role="button" class="d_sm_inline_b button_type_4 bg_scheme_color color_light r_corners tt_uppercase tr_all_hover">Buy Now</a>
+									</section>
+								</li>
+								<li>
+									<img src="images/slide_06.jpg" alt="" data-custom-thumb="images/slide_02.jpg">
+									<!--Text Animation Part-->
+									<section class="slide_caption_3 t_align_c d_xs_none">
+										<img src="images/slider_layer_img.png" alt="" class="m_bottom_5">
+										<div class="color_light slider_title tt_uppercase t_align_c m_bottom_60 m_sm_bottom_20">
+											<b class="color_dark">Up to 70%</b>
+										</div>
+										<a href="#" role="button" class="d_sm_inline_b button_type_4 bg_scheme_color color_light r_corners tt_uppercase tr_all_hover">Shop Now</a>
+									</section>	
+								</li>
+								<li>
+									<img src="images/slide_04.jpg" alt="" data-custom-thumb="images/slide_01.jpg"> 
+									<!--Text Animation Part-->
+									<section class="slide_caption t_align_c d_xs_none">
+										<div class="f_size_large color_light tt_uppercase slider_title_3 m_bottom_10">Our New Offer</div>
+										<hr class="slider_divider d_inline_b m_bottom_10">
+										<div class="color_light slider_title_4 tt_uppercase t_align_c m_bottom_45 m_md_bottom_20">
+											<b>UPTO 20%</b>
+										</div>
+										<a href="#" role="button" class="d_sm_inline_b button_type_4 bg_scheme_color color_light r_corners tt_uppercase tr_all_hover">Buy Now</a>
+									</section>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- Side Banners-->
+					<div class="col-lg-3 col_md_3 col-sm-3 t_xs_align_c s_banners">
+						<a href="#" class="d_block d_xs_inline_b m_bottom_20 animate_ftr">
+							<img src="images/banner_img_7.jpg" alt="">
+						</a>
+						<a href="#" class="d_block d_xs_inline_b m_xs_left_5 animate_ftr m_mxs_left_0">
+							<img src="images/banner_img_8.jpg" alt="">
+						</a>
+					</div>
+				</div>
+			</section>
+			<!--Slider with banner End-->	
+			
+			<!--Content part-->
+			<div class="page_content_offset">
+				<div class="container">
+					<!--Filter List - All type of products -->
+						<div class="clearfix">
+							<h2 class="tt_uppercase color_dark f_left">All Products</h2>
+							<ul class="horizontal_list clearfix tt_uppercase isotope_menu f_size_ex_large f_left f_xs_none m_xs_bottom_15" data-carousel-filter=".wfilter_carousel">
+								<li class="active m_right_5 m_bottom_10 m_xs_bottom_5 animate_ftr">
+									<button class="button_type_2 bg_light_color_1 r_corners tr_delay_hover tt_uppercase box_s_none" data-filter="*">
+									All
+									</button>
+								</li>
+								<li class="m_right_5 m_bottom_10 m_xs_bottom_5 animate_ftr">
+									<button class="button_type_2 bg_light_color_1 r_corners tr_delay_hover tt_uppercase box_s_none" data-filter="filter_class_featured">
+									Featured
+									</button>
+								</li>
+								<li>
+									<button class="button_type_2 bg_light_color_1 r_corners tr_delay_hover tt_uppercase box_s_none" data-filter="filter_class_new">
+									New Arrival
+									</button>
+								</li>
+								<li>
+									<button class="button_type_2 bg_light_color_1 r_corners tr_delay_hover tt_uppercase box_s_none" data-filter="filter_class_specials">
+									Special
+									</button>
+								</li>
+								<li>
+									<button class="button_type_2 bg_light_color_1 r_corners tr_delay_hover tt_uppercase box_s_none" data-filter="filter_class_hit">
+									Top Selling
+									</button>
+								</li>
+							</ul>
+							<div class="f_right clearfix nav_button_wrap f_mxs_none m_mxs_bottom_5 f_xs_none">
+								<button class="button_type_7 bg_cs_hover box_s_none f_size_ex_large t_align_c bg_light_color_1 f_left tr_delay_hover r_corners wfilter_prev">
+									<i class="fa fa-angle-left"></i>
+								</button>
+								<button class="button_type_7 bg_cs_hover box_s_none f_size_ex_large t_align_c bg_light_color_1 f_left m_left_5 tr_delay_hover r_corners wfilter_next">
+									<i class="fa fa-angle-right"></i>
+								</button>
+							</div>
+						</div>
+						<!--Carousel With filter-->
+						<div class="wfilter_carousel m_bottom_30 m_xs_bottom_15">
+							<figure class="r_corners photoframe shadow relative tr_all_hover filter_class_featured animate_ftb long">
+								<!--Product Preview-->
+								<a href="#" class="d_block relative pp_wrap">
+									<!--Hot Product-->
+									<span class="hot_stripe"><img src="images/hot_product.png" alt=""></span>
+									<image src="images/product_img_1.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="bottom_type_5 box_s_none color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+								</a>
+								<!-- Description and price of products-->
+								<figcaption>
+									<h5 class="m_bottom_10"><a href="#" class="color_dark ellipsis">Walker Pack Offer</a></h5>
+									<div class="clearfix">
+										<p class="scheme_color f_left f_size_large m_bottom_15">$105.00</p>
+									</div>
+									<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">Add to cart</button>
+								</figcaption>
+							</figure>
+							<figure class="r_corners photoframe shadow relative tr_all_hover animate_ftb long filter_class_specials">
+								<!--Product Preview-->
+								<a href="#" class="d_block relative wrapper pp_wrap">
+									<img src="images/product_img_3.jpg" class="tr_all_hover" alt="">
+									<span data="#quick_view_product" class="box_s_none button_type_5 color_light r_corners tr_all_hover d_xs_none">Quick View</span>
+								</a>
+								<!--description and price of products-->
+								<figcaption>
+									<h5 class="m_bottom_10"><a href="#" class="color_dark ellipsis">Facial Cream Packet</a></h5>
+									<div class="clearfix">
+										<p>$99.00</p>
+									</div>
+									<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">Add to Cart</button>
+								</figcaption>
+							</figure>
+							<figure class="r_corners photoframe shadow relative animate_ftb long tr_all_hover filter_class_hit">
+								<!-- Product Preview-->
+								<a href="#" class="d_block relative pp_wrap">
+									<!--Sale Product-->
+									<span class="hot_stripe">
+										<img src="images/sale_product.png" alt="">
+									</span>
+										<img src="images/product_img_4.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="box_s_none button_type_5 color_light r_corners tr_all_hover d_xs_none">
+										Quick View
+									</span>
+								</a>
+								<!-- Description and price of products-->
+								<figcaption>
+									<h5 class="m_bottom_10">
+										<a href="#" class="color_dark ellipsis">Milky Small Pack</a>
+									</h5>
+									<div class="clearfix">
+										<p class="scheme_color f_left f_size_large m_bottom_15">$36.00</p>
+									</div>
+									<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">
+										Add to Cart
+									</button>
+								</figcaption>
+							</figure>
+							<figure class="r_corners photoframe shadow relative animate_ftb long tr_all_hover filter_class_hit">
+								<!--Product Preview-->
+								<a href="#" class="d_block relative pp_wrap">
+									<!--Sale Product-->
+									<span class="hot_stripe">
+										<img src="images/sale_product.png" alt="">
+									</span>
+									<image src="images/product_img_4.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="box_s_none button_type_5 color_light r_corners tr_all_hover d_xs_none">
+									Quick View
+									</span>
+								</a>
+								<!-- Description and price of products-->
+								<figcaption>
+									<h5 class="m_bottom_10">
+										<a href="#" class="color_dark ellipsis">Walker Pack Offer</a>
+									</h5>
+									<div class="clearfix">
+										<p class="scheme_color f_left f_size_large m_bottom_15">$102.00</p>
+									</div>
+									<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">
+										Add to Cart
+									</button>
+								</figcaption>
+							</figure>
+							<figure class="r_corners photoframe shadow relative animate_ftb long tr_all_hover filter_class_rated">
+								<!--Product Preview-->
+								<a href="#" class="d_block relative pp_wrap">
+									<!--Hot Product-->
+									<span class="hot_stripe type_2">
+										<img src="images/hot_product_type_2.png" alt="">
+									</span>
+									<img src="images/product_img_5.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="box_s_none button_type_5 color_light r_corners tr_all_hover d_xs_none">
+										Quick View
+									</span>
+								</a>	
+								<!--Description and price of products-->	
+								<figcaption>
+									<h5 class="m_bottom_10">
+										<a href="#" class="color_dark ellipsis">Beaf Package</a>
+									</h5>
+									<div class="clearfix">
+										<p class="scheme_color f_left f_size_large m_bottom_15">$252.00</p>
+									</div>
+									<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">
+										Add to Cart
+									</button>
+								</figcaption>
+							</figure>
+							<figure class="r_corners photoframe shadow relative tr_all_hover animate_ftb long filter_class_featured">
+								<!--Product Preview-->
+								<a href="#" class="d_block relative wrapper pp_wrap">
+									<img src="images/product_img_6.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="box_s_none button_type_5 color_light r_corners tr_all_hover d_xs_none">
+										Quick View
+									</span>
+								</a>
+								<!--Description and price of products-->	
+								<figcaption>
+									<h5 class="m_bottom_10">
+										<a href="#" class="color_dark ellipsis">Facial Cream Packet</a>
+									</h5>
+									<div class="clearfix m_bottom_15">
+										<p class="scheme_color f_size_large f_left">$57.00</p>
+									</div>
+									<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">Add to Cart</button>
+								</figcaption>
+							</figure>
+							<figure class="r_corners photoframe shadow relative animate_ftb long tr_all_hover filter_class_specials">
+								<!--Product Preview-->
+								<a href="#" class="d_block relative wrapper pp_wrap">
+									<img src="images/product_img_7.jpg" class="tr_all_hover" alt="">
+									<span data-popup="#quick_view_product" class="box_s_none button_type_5 color_light r_corners tr_all_hover d_xs_none">
+										Quick View
+									</span>
+								</a>
+								<!--description and price of product-->
+								<figcaption>
+									<h5 class="m_bottom_10">
+										<a href="#" class="color_dark ellipsis">Choclate Bar</a>
+									</h5>
+									<div class="clearfix">
+										<p class="scheme_color f_left f_size_large m_bottom_15">$752.00</p>
+									</div>
+									<button class="button_type_4 bg_scheme_color r_corners tr_all_hover color_light mw_0">
+										Add to Cart
+									</button>
+								</figcaption>
+							</figure>
+							<figure>
+								<figcaption>
+								</figcaption>
+							</figure>
+						</div>
+				</div>
+			</div>
+			
+		</div>
+		<!--boxed layout End-->
+	</body>
+</html>	

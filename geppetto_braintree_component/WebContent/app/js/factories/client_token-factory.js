@@ -9,8 +9,7 @@ app.factory('ClientToken',[
 
 		    $http.get(url).success(function (data, status, headers, config) {
 		    	defer.resolve(data);                
-            }).error(function (data, status, headers, config) {
-            	alert(data);
+            }).error(function (data, status, headers, config) {            	
             	defer.reject(data);                
             });
 

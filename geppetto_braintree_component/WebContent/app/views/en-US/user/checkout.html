@@ -1,19 +1,94 @@
-<header class="user" ng-include="'app/views/en-US/header.html'"></header>
-<div class="project">
-	<h1 class="title">Payment Details</h1>
+<section class="container">
+				<div class="row clearfix">
+					<!--slider-->
+					<section class="col-lg-9 col-md-9 col-sm-9 m_xs_bottom_30">
+							<h2 class="tt_uppercase color_dark m_bottom_25">Cart</h2>
+							<!--cart table-->
+							<table class="table_type_4 responsive_table full_width r_corners wraper shadow t_align_l t_xs_align_c m_bottom_30">
+								<thead>
+									<tr class="f_size_large">
+										<!--titles for td-->
+										<th>Product Image &amp; Name</th>
+										<th>SKU</th>
+										<th>Price</th>
+										<th>Quantity</th>
+										<th>Subtotal</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr data-ng-repeat="object in cart" id="{{object.product.id}}">
+										<!--Product name and image-->
+										<td data-title="Product Image &amp; name" class="t_md_align_c">
+											<img src="images/product/{{object.product.image}}" alt="" class="m_md_bottom_5 d_xs_block d_xs_centered" width="45%">
+											<a href="#" class="d_inline_b m_left_5 color_dark">{{object.product.name}}</a>
+										</td>
+										<!--product key-->
+										<td data-title="SKU">PS{{object.product.id}}</td>
+										<!--product price-->
+										<td data-title="Price">
+											<p class="f_size_large color_dark">{{object.product.price | currency}}</p>
+										</td>
+										<!--quantity-->
+										<td data-title="Quantity">
+											<div class="clearfix quantity r_corners d_inline_middle f_size_medium color_dark m_bottom_10">
+												<button class="bg_tr d_block f_left" data-direction="down" data-ng-click="decreaseQuantity(object.product.id)">-</button>
+												<input type="text" name="" readonly value="{{object.quantity}}" class="f_left">
+												<button class="bg_tr d_block f_left" data-direction="up" data-ng-click="incrementQuantity(object.product.id)">+</button>
+											</div>
+											<div>
+												<a class="color_dark"><i class="fa fa-check f_size_medium m_right_5"></i>Update</a><br>
+												<button data-ng-click="removeProduct(object.product.id)"><i class="fa fa-times f_size_medium m_right_5"></i>Remove</button><br>
+											</div>
+										</td>
+										<!--subtotal-->
+										<td data-title="Subtotal">
+											<p class="f_size_large fw_medium scheme_color">{{object.quantity*object.product.price| currency}}</p>
+										</td>
+									</tr>
+									<!--total-->
+									<tr>
+										<td colspan="4" class="v_align_m d_ib_offset_large t_xs_align_l">											
+											<p class="fw_medium f_size_large t_align_r scheme_color p_xs_hr_0 d_inline_middle half_column d_ib_offset_normal d_xs_block w_xs_full t_xs_align_c">Total:</p>
+										</td>
+										<td colspan="1" class="v_align_m">
+											<p class="fw_medium f_size_large scheme_color m_xs_bottom_10" >{{getTotal() | currency}}</p>
+										</td>
+									</tr>
+								</tbody>
+							</table>
 
-	<div class="container">
-		<div class="row">
+						</section>
+					<!--Side-banners-->
+					<div class="col-lg-3 col-md-3 col-sm-3 t_xs_align_c s_banners">
+						<a href="#" class="d_block d_xs_inline_b m_bottom_20 animate_ftr">
+							<img src="images/side-banner/side-banner1.jpg" alt="">
+						</a>
+						<a href="#" class="d_block d_xs_inline_b m_xs_left_5 animate_ftr m_mxs_left_0">
+							<img src="images/side-banner/side-banner2.jpg" alt="">
+						</a>
+					</div>
+					<div class="clearfix">&nbsp;</div>
+				</div>
+				
+	
+			</section>
+
+<h2 class="tt_uppercase color_dark m_bottom_25">Payment Details</h2>
+	<section class="photoframe col-lg-9 col-md-9 col-sm-9 m_xs_bottom_30 ">
+		<div class="row clearfix">
 			<div class="col-sm-6 col-md-8">
-				<div class="panel panel-default col-md-offset-5">
+				<div class="panel panel-default col-md-offset-3">
 					<div class="panel-body">
+				
 						<form class="form-horizontal" name="paymentForm" id="checkout" novalidate="novalidate"
 							method="post">
 							<div class="row">
 								<div class="col-xs-10 col-sm-offset-1">
 									<div class="form-group">
 										<label for="cardholder_name" class="control-label">Card
-											Holder Name</label> <input class="form-control" name="cardholderName"
+											Holder Name</label> 
+											<div>
+											<input class="form-control" name="cardholderName"
 											ng-model="paymentDetail.cardholderName"
 											data-braintree-name="cardholder_name"
 											placeholder="Enter Card Holder Name"
@@ -22,6 +97,7 @@
 											style="color: red;"><span
 											ng-show="paymentForm.cardholderName.$error.required">Card Holder Name is
 											required!</span></span>
+											</div>
 									</div>
 								</div>
 							</div>
@@ -99,16 +175,19 @@
 									</div>
 								</div>
 							</div>
+							
+							
+							
 							<div class="action">
-								<input class="btn btn-default submit col-sm-offset-5" type="submit" id="submit"
-								ng-click="subscribe()" ng-disabled="!paymentForm.$valid"
-								value="Subcribe">
+								<input class="button_type_4 r_corners bg_light_color_2 mw_0 tr_all_hover color_dark submit col-sm-offset-7" type="submit" id="submit"
+								ng-click="pay()" ng-disabled="!paymentForm.$valid"
+								value="Pay">
+							
 							</div>
+							
 						</form>
-					</div>
-				</div>
-			</div>
+						</div>
+					</div>	
+			</div>			
 		</div>
-	</div>
-</div>
-<footer ng-include="'app/views/en-US/footer.html'"></footer>
+	</section>
